@@ -1,4 +1,14 @@
 <html>
+<!--
+
+
+\ \      / / | ____| | |      / ___|  / _ \  |  \/  | | ____|
+ \ \ /\ / /  |  _|   | |     | |     | | | | | |\/| | |  _|  
+  \ V  V /   | |___  | |___  | |___  | |_| | | |  | | | |___ 
+   \_/\_/    |_____| |_____|  \____|  \___/  |_|  |_| |_____|
+
+
+-->
     <head>
 		<link rel="stylesheet" type="text/css" href="style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
@@ -17,12 +27,13 @@
             </section>
             <section id="toppage">
                 <div id="loading">Now Loading...</div>
+                <div id="progress"></div>
                 <div id="name">miyagaw</div>
                 <div class="name_after" id="name_61">61</div>
                 <div class="name_after" id="name_a">a</div>
             </section>
             <img id="icon" src="https://i.imgur.com/s4hjUrI.jpg"></img>
-            <a href="javascript:void(0)" id="about" target="_blank">
+            <a href="javascript:void(0)" id="about">
                 <span id="img_fadein">
                     <img src="https://imgur.com/Pr90kkZ.png"></img>
                 </span>
@@ -35,11 +46,16 @@
             </a>
             <section id="icons">
                 <ul>
-                    <a href="http://twitter.com/miyagi1024" target="_blank"><img src="https://i.imgur.com/I7C8kCr.png" id="twitter"></img></a>
-                    <a href="https://www.facebook.com/miyagawa.taisei" target="_blank"><img src="https://i.imgur.com/zUTcTIU.jpg" id="facebook"></img></a>
-                    <a href="https://github.com/miyagi1024" target="_blank"><img src="https://i.imgur.com/I3vjBhe.png" id="github"></img></a>
-                    <a href="https://qiita.com/miyagi1024" target="_blank"><img src="https://i.imgur.com/YHrqcT7.png" id="qiita"></img></a>
-                    <a href="http://ta1se1.hatenablog.com/" target="_blank"><img src="https://i.imgur.com/54OVGE4.png" id="hatena"></img></a>
+                    <a href="javascript:void(0)" id="twitter_a" target="_blank"><img src="https://i.imgur.com/I7C8kCr.png" id="twitter"></img></a>
+                    <div id="twitter-circle"></div>
+                    <a href="javascript:void(0)" id="facebook_a" target="_blank"><img src="https://i.imgur.com/zUTcTIU.jpg" id="facebook"></img></a>
+                    <div id="facebook-circle"></div>
+                    <a href="javascript:void(0)" id="github_a" target="_blank"><img src="https://i.imgur.com/I3vjBhe.png" id="github"></img></a>
+                    <div id="github-circle"></div>
+                    <a href="javascript:void(0)" id="qiita_a" target="_blank"><img src="https://i.imgur.com/YHrqcT7.png" id="qiita"></img></a>
+                    <div id="qiita-circle"></div>
+                    <a href="javascript:void(0)" id="hatena_a" target="_blank"><img src="https://i.imgur.com/54OVGE4.png" id="hatena"></img></a>
+                    <div id="hatena-circle"></div>
                 </ul>
             </section>
         </main>
@@ -47,9 +63,29 @@
             function sleep(time, callback){
               setTimeout(callback, time);
             }
+            sleep(7300, function() {
+                var twitter = document.getElementById("twitter_a");
+                twitter.href = "https://twitter.com/miyagi1024/";
+            });
+            sleep(7450, function() {
+                var facebook = document.getElementById("facebook_a");
+                facebook.href = "https://www.facebook.com/miyagawa.taisei";
+            });
+            sleep(7600, function() {
+                var github = document.getElementById("github_a");
+                github.href = "https://github.com/miyagi1024";
+            });
+            sleep(7750, function() {
+                var qiita = document.getElementById("qiita_a");
+                qiita.href = "https://qiita.com/miyagi1024";
+            });
+            sleep(7900, function() {
+                var hatena = document.getElementById("hatena_a");
+                hatena.href = "http://ta1se1.hatenablog.com/";
+            });
             sleep(8500, function (){
                 var about = document.getElementById("about");
-                about.href = "https://miyagi1024.github.io/old/index.html";
+                about.href = "https://miyagi1024.github.io/index.html";
             });
             //document.addEventListener("DOMContentLoaded", function(){
             //var name_61 = document.getElementById("name_61");
